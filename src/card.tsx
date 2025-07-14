@@ -1,9 +1,9 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import cake from "./assets/cake.png";
 import pa from "./assets/pamed.jpg"
+import confetti from "canvas-confetti";
 
 import HBD from "./HBD.mp3"
-import confetti from "https://cdn.skypack.dev/canvas-confetti"
 
 
 const Card = () => {
@@ -12,7 +12,12 @@ const Card = () => {
   const handleOpen = () => {
     if (!isOpen){
       let bdMusic = new Audio(HBD);
-      confetti()
+      confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+
       bdMusic.play();
       setIsOpen(true);
     }

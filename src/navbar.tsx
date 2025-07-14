@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Navbar = () => {
   return (
     <div className='w-full flex items-center content-between py-2 bg-amber-50 justify-center'>

@@ -1,7 +1,5 @@
 import Card from "./card"
 import Navbar from "./navbar"
-import { useState } from "react";
-
 function App() {
 
   return (
